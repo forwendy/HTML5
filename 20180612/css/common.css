@@ -1,0 +1,41 @@
+*{
+    /* 取消Safari浏览器可点击元素变灰效果 */
+    -webkit-tap-highlight-color: transparent;
+}
+body,
+input,
+textarea {
+    margin: 0;
+	font: 12px "PingFang-SC-Regular", "Microsoft YaHei", sans-serif;
+}
+
+[data-dpr="3"] body,
+[data-dpr="3"] input,
+[data-dpr="3"] textarea {
+    font-size: 14px;
+}
+textarea,
+input{
+    font-family: inherit;
+   /*-webkit-user-select: none;/* 禁掉用户可以选中页面中的内容，*/
+    -webkit-appearance:none;
+    outline: none;
+}
+
+.fix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
