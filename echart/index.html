@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+		<!--iphone-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<!--iphone-->
+		<title>echart</title>
+		<style>
+			#main{
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main"></div>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/echarts/4.1.0.rc0/echarts.min.js"></script>
+		<script src="http://echarts.baidu.com/asset/map/js/china.js"></script>
+		<script type="text/javascript">
+var map = echarts.init(document.getElementById('main'));
+map.setOption({
+	series: [{
+    type: 'map',
+    map: 'china',
+    zoom: 1,
+    // 武汉
+    // center: [114.30, 30.6]
+	}]
+});
+    </script>
+	</body>
+</html>
