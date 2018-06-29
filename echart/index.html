@@ -23,18 +23,54 @@
 		<div id="main"></div>
 		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://cdn.bootcss.com/echarts/4.1.0.rc0/echarts.min.js"></script>
-		<script src="china.js"></script>
+		<script src="http://echarts.baidu.com/asset/map/js/china.js"></script>
 		<script type="text/javascript">
 var map = echarts.init(document.getElementById('main'));
-map.setOption({
+var zoom = 1;
+var option = {
 	series: [{
-    type: 'map',
-    map: 'china',
-    zoom: 1,
-    // 武汉
-    // center: [114.30, 30.6]
+  	type: 'map',
+  	map: 'china',
+  	zoom: 1,
+  	roam: true,
+  	itemStyle: {
+  		areaColor: '#00ce9b',
+  		borderColor: '#fff'
+  	},
+  	emphasis: {
+  		label: {
+  			show: true
+  		},
+  		itemStyle: {
+  			areaColor: '#00b588'
+  		}
+  	}
 	}]
-});
+}
+map.setOption(option);
+
+var zoomTime = setInterval(function(){
+	zoomIn(4)
+}, 500);
+
+function zoomIn(i){
+	console.log(zoom)
+	if(zoom <= i){
+		zoom += 1;
+
+		map.setOption({
+			series: [{
+   		type: 'map',
+    	map: 'china',
+    	zoom: zoom,
+   		// 武汉
+    	center: [114.30, 30.6]
+			}]
+		});
+	}else{
+		setTimeout(zoomTime);
+	}
+}
     </script>
 	</body>
 </html>
