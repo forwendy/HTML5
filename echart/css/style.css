@@ -1,0 +1,89 @@
+.fix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+body{
+  margin: 0;
+  font: 12px "PingFang-SC-Regular", "Microsoft YaHei", sans-serif;
+}
+
+.one {
+  width: 7.5rem;
+  height: 13.33rem;
+  background: url(../imgs/one-bg.png) no-repeat center bottom;
+  background-size: 7.5rem 13.33rem;
+}
+.two {
+  width: 7.5rem;
+  height: 13.34rem;
+  background: url(../imgs/two-bg.png) no-repeat center bottom;
+  background-size: 7.5rem 13.34rem;
+}
+.three {
+  width: 7.5rem;
+  height: 15.34rem;
+  background: url(../imgs/three-bg.png) no-repeat center bottom;
+  background-size: 7.5rem 15.34rem;
+}
+
+#map{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.one-text{
+  position: absolute;
+  right: 0.15rem;
+  bottom: 0.2rem;
+  width: 3.52rem;
+  height: 4.76rem;
+  background: url(../imgs/one-text-bg.png) no-repeat;
+  background-size: 3.52rem 4.76rem;
+  color: #fff;
+  text-align: center;
+}
+.one-text h1{
+  font-size: 0.4rem;
+  font-weight: 500;
+  padding: 0 0.3rem;
+  margin: 0.2rem 0;
+}
+.one-text p{
+  font-size: 0.32rem;
+  padding: 0 0.3rem;
+  margin: 0 0 0.2rem;
+}
+.one-text p span:first-child {
+  margin-right: 0.2rem;
+  color: #00ffff;
+}
+.one-text p .fr {
+  font-size: 0.24rem;
+  padding-right: 0.12rem;
+}
+
+.pop{
+  width: 126px;
+  height: 71px;
+  background: url(../imgs/pop-bg.png) no-repeat;
+  background-size: 126px 71px;
+  position: absolute;
+  font-size: 18px;
+  padding: 8px 0 0 10px;
+}

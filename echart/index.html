@@ -9,68 +9,32 @@
 		<meta name="format-detection" content="telephone=no, email=no">
 		<!--iphone-->
 		<title>echart</title>
+		<script src="js/fit.js"></script>
+		<link rel="stylesheet" href="css/style.css">
 		<style>
-			#main{
-				position: fixed;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-			}
 		</style>
 	</head>
 	<body>
-		<div id="main"></div>
+		<div class="one">
+			<div id= "map">
+
+			</div>
+			<div class="one-text">
+				<h1>创客星运营平台<br>大数据实时更新</h1>
+				<p><span>000000</span> 城市数量</p>
+				<p><span>000012</span> 站点数量</p>
+				<p><span>000235</span> 工位数量</p>
+				<p class="fix" style="margin-bottom:0.15rem;"><span>006789</span> 站点面积<span class="fr">（使用中）</span></p>
+				<p><span>022578</span> 注册用户</p>
+			</div>
+		</div>
+		<div class="two"></div>
+		<div class="three"></div>
 		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://cdn.bootcss.com/echarts/4.1.0.rc0/echarts.min.js"></script>
-		<script src="http://echarts.baidu.com/asset/map/js/china.js"></script>
+		<script src="js/china.js"></script>
+		<script src="js/map.js"></script>
 		<script type="text/javascript">
-var map = echarts.init(document.getElementById('main'));
-var zoom = 1;
-var option = {
-	series: [{
-  	type: 'map',
-  	map: 'china',
-  	zoom: 1,
-  	roam: true,
-  	itemStyle: {
-  		areaColor: '#00ce9b',
-  		borderColor: '#fff'
-  	},
-  	emphasis: {
-  		label: {
-  			show: true
-  		},
-  		itemStyle: {
-  			areaColor: '#00b588'
-  		}
-  	}
-	}]
-}
-map.setOption(option);
-
-var zoomTime = setInterval(function(){
-	zoomIn(4)
-}, 500);
-
-function zoomIn(i){
-	console.log(zoom)
-	if(zoom <= i){
-		zoom += 1;
-
-		map.setOption({
-			series: [{
-   		type: 'map',
-    	map: 'china',
-    	zoom: zoom,
-   		// 武汉
-    	center: [114.30, 30.6]
-			}]
-		});
-	}else{
-		setTimeout(zoomTime);
-	}
-}
     </script>
 	</body>
 </html>
