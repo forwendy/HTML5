@@ -11,30 +11,203 @@
 		<title>echart</title>
 		<script src="js/fit.js"></script>
 		<link rel="stylesheet" href="css/style.css">
-		<style>
-		</style>
+		<script>
+		function preloadImg(arr) {
+			var imgWrap = [];
+			for(var i=0; i<arr.length; i++){
+				imgWrap[i] = new Image();
+				imgWrap[i].src = path + arr[i].src;
+ 			}
+		}
+		</script>
 	</head>
 	<body>
 		<div class="one">
 			<div id= "map">
-
 			</div>
 			<div class="one-text">
 				<h1>创客星运营平台<br>大数据实时更新</h1>
-				<p><span>000000</span> 城市数量</p>
-				<p><span>000012</span> 站点数量</p>
-				<p><span>000235</span> 工位数量</p>
-				<p class="fix" style="margin-bottom:0.15rem;"><span>006789</span> 站点面积<span class="fr">（使用中）</span></p>
-				<p><span>022578</span> 注册用户</p>
+				<p><span>000013</span> 城市数量</p>
+				<p><span>000026</span> 站点数量</p>
+				<p><span>015000</span> 工位数量</p>
+				<p class="fix" style="margin-bottom:0.1rem;"><span>180000</span> 站点面积<span class="fr">（使用中）</span></p>
+				<p><span>080000</span> 注册用户</p>
 			</div>
 		</div>
-		<div class="two"></div>
-		<div class="three"></div>
+		<div class="two">
+			<h1 class="title">动态数据汇总</h1>
+			<div class="content">
+				<ul class="apply-menu fix" id="applyMenu">
+					<li data-index="0" class="active">工位申请</li>
+					<li data-index="1">人才公寓</li>
+					<li data-index="2">报事报修</li>
+					<li data-index="3">预约参观</li>
+					<li data-index="4">会议室预定</li>
+				</ul>
+				<div class="apply-scroll">
+					<div class="apply-list">
+						<div class="apply-item">
+							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
+							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
+							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
+							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
+							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+						</div><div class="apply-item">
+							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
+							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
+							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="three">
+				<h1 class="title">入住数据分析</h1>
+				<div class="content">
+					<div class="pie-container">
+						<h2>客户需求站点</h2>
+						<div id="need" style="height: 4rem;"></div>
+					</div>
+					<div class="pie-container">
+						<h2>客户行业</h2>
+						<div id="tmt" style="height: 4rem;"></div>
+					</div>
+				</div>
+				<img src="imgs/copyright.png" class="copyright">
+		</div>
 		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/echarts/4.1.0.rc0/echarts.min.js"></script>
-		<script src="js/china.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script src=" js/china.js"></script>
 		<script src="js/map.js"></script>
 		<script type="text/javascript">
+			var needData = [{
+				name: '书城路',
+				value: 15.98
+			},{
+				name: '研创中心',
+				value: 2.7
+			},{
+				name: '光谷金融港',
+				value: 23.5
+			},{
+				name: '光谷软件园',
+				value: 3.29
+			},{
+				name: '创意天地北',
+				value: 9.99
+			},{
+				name: '创意天地南',
+				value: 23.74
+			},{
+				name: '梦工场站',
+				value: 13.87
+			},{
+				name: '理想国际站',
+				value: 5.24
+			},{
+				name: '金融港东站',
+				value: 3.2
+			},{
+				name: '创客星SOHO',
+				value: 2.88
+			},{
+				name: '其他',
+				value: 1.61
+			}];
+
+			var tmtData = [{
+					name: '营销推广',
+					value: 11.91
+				},{
+					name: 'IT/通信',
+					value: 27.87
+				},{
+					name: '金融业',
+					value: 1.62
+				},{
+					name: '商务服务',
+					value: 21.01
+				},{
+					name: '贸易/批发/零售',
+					value: 1
+				},{
+					name: '服务业',
+					value: 0.91
+				},{
+					name: '文化/传媒',
+					value: 1.26
+				},{
+					name: '教育',
+					value: 2.71
+				},{
+					name: '运营与健康',
+					value: 1.53
+				},{
+					name: '生产/加工/制造',
+					value: 3.07
+				},{
+					name: '其他',
+					value: 27.11
+				}];
+			map();
+			pic('need',needData);
+			pic('tmt',tmtData);
+			$(function () {
+				$('#applyMenu li').click(function () {
+					$('#applyMenu li').removeClass('active');
+					$(this).addClass('active');
+				});
+				setInterval(function(){
+					var index = $('#applyMenu .active').data('index');
+					if(index == 4){
+
+						$('#applyMenu li').eq(0).click();
+					}else {
+						$('#applyMenu li').eq(index+1).click();
+					}
+				},2000);
+			});
+
+
+			function pic(id,data) {
+				console.log(data)
+				var pie = echarts.init(document.getElementById(id));
+				var option = {
+					color: ['#36cb99','#fb9c01', '#cfcccb', '#9bcd33', '#9dcefd','#fd6a65',  '#fdffca', '#ffca59','#0f8fb8', '#fbff69', '#ce3468','#356466'],
+			    series: [{
+						type: 'pie',
+						name: '客户需求站点',
+            radius : '55%',
+            center: ['50%', '50%'],
+						data: data,
+						labelLine: {
+							lineStyle: {
+								color: '#00ffff'
+							}
+						},
+						itemStyle: {
+							borderColor: '#fff',
+							borderWidth: 1
+						},
+						label: {
+							color: '#fff'
+						}
+					}]
+				};
+				pie.setOption(option);
+			};
     </script>
 	</body>
 </html>
