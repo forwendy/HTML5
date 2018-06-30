@@ -1,3 +1,7 @@
+*{
+    /* 取消Safari浏览器可点击元素变灰效果 */
+    -webkit-tap-highlight-color: transparent;
+}
 .fix:after {
     content: '';
     display: table;
@@ -64,6 +68,7 @@ body{
   font-weight: 500;
   padding: 0 0.3rem;
   margin: 0.2rem 0;
+  line-height: 1.2;
 }
 .one-text p{
   font-size: 0.32rem;
