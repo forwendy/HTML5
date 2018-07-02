@@ -234,7 +234,7 @@ var map = function () {
       borderWidth: 0,
       textStyle:{
         color: '#000',
-        fontSize: 18
+        fontSize: 22
       },
       position: 'top',
       formatter: function (obj) {
@@ -289,11 +289,13 @@ var map = function () {
     }]
   };
 
+  option.geo.center = [114.31, 30.52];
+
   map.setOption(option);
 
-  var zoomTime = setInterval(function(){
-  	zoomIn(4);
-  }, 500);
+//   var zoomTime = setInterval(function(){
+//   	zoomIn(4);
+// }, 100);
 
   function zoomIn(i){
   	if(zoom <= i){

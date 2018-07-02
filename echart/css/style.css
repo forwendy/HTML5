@@ -7,7 +7,9 @@
     display: table;
     clear: both;
 }
-
+.hide{
+    display: none;
+}
 .fix {
     *zoom: 1;
 }
@@ -27,8 +29,8 @@ body{
 .one {
   width: 7.5rem;
   height: 12.10rem;
-  background: url(../imgs/one-bg.png) no-repeat center bottom;
-  background-size: 7.5rem 13.33rem;
+  background: url(../imgs/one-bg.png) no-repeat center top;
+  background-size: 7.5rem 12.10rem;
   position: relative;
 }
 .two {
@@ -52,14 +54,46 @@ body{
   bottom: 0;
 }
 
+.one-top-text{
+    position: absolute;
+    top: 0.3rem;
+    left: 0.1rem;
+    right: 0.1rem;
+    font-size: 0.2rem;
+    color: #fff;
+    text-align: center;
+}
+.one-top-text span{
+    padding-right: 0.1rem;
+}
+.one-top-text span:last-child{
+    padding-right: 0;
+}
+.one-top-text span::before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.08rem;
+    height: 0.08rem;
+    margin-right: 0.05rem;
+    border-radius: 50%;
+    background: #fff;
+}
+.one-top-text p{
+    font-size: 0.36rem;
+    margin: 0 0 0.2rem;
+}
+
 .one-text{
   position: absolute;
-  right: 0.15rem;
-  bottom: 0.2rem;
-  width: 3.52rem;
-  height: 4.76rem;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto 0.22rem;
+  width: 6.9rem;
+  height: 3.51rem;
   background: url(../imgs/one-text-bg.png) no-repeat;
-  background-size: 3.52rem 4.76rem;
+  background-size: 6.9rem 3.51rem;
   color: #fff;
   text-align: center;
 }
@@ -67,17 +101,20 @@ body{
   font-size: 0.4rem;
   font-weight: 500;
   padding: 0 0.3rem;
-  margin: 0.2rem 0;
-  line-height: 1.2;
+  margin: 0.38rem 0 0.4rem;
+  line-height: 1;
 }
 .one-text p{
+  float: left;
+  width: 33.3%;
   font-size: 0.32rem;
-  padding: 0 0.3rem;
-  margin: 0 0 0.2rem;
+  margin: 0 0 0.35rem;
+  line-height: 1;
 }
 .one-text p span:first-child {
-  margin-right: 0.2rem;
+  display: block;
   color: #00ffff;
+  margin-bottom: 0.15rem;
 }
 .one-text p .fr {
   font-size: 0.24rem;
@@ -155,8 +192,7 @@ body{
 }
 
 .pie-container{
-  padding-top: 0.25rem;
-  margin-bottom: 0.6rem;
+  padding-top: 0.5rem;
 }
 .pie-container h2{
   display: block;
@@ -177,5 +213,6 @@ body{
   display: block;
   width: 3.2rem;
   height: 1.07rem;
-  margin: 1rem auto;
+  padding: 1rem 0 0;
+  margin: 0 auto;
 }

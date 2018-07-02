@@ -19,5 +19,5 @@ if (dpr) {
     }
 }
 document.documentElement.setAttribute('data-dpr', dpr);
-if(deviceWidth > 750) deviceWidth = 750;
+// if(deviceWidth > 750) deviceWidth = 750;
 document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';

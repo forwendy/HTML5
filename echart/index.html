@@ -26,12 +26,22 @@
 			<div id= "map">
 			</div>
 			<div class="one-text">
-				<h1>创客星运营平台<br>大数据实时更新</h1>
-				<p><span>000013</span> 城市数量</p>
-				<p><span>000026</span> 站点数量</p>
-				<p><span>015000</span> 工位数量</p>
-				<p class="fix" style="margin-bottom:0.1rem;"><span>180000</span> 站点面积<span class="fr">（使用中）</span></p>
-				<p><span>080000</span> 注册用户</p>
+				<h1>OVU创客星 大数据实时更新</h1>
+				<p><span>13个</span> 城市数量</p>
+				<p><span>26个</span> 站点数量</p>
+				<p><span id="desk" data-total="15367">15367个</span> 工位数量</p>
+
+				<p><span id="area" data-total="319230">319230㎡</span> 站点面积</p>
+				<p><span id="user" data-total="86240">86240个</span> 注册用户</p>
+				<p><span id="company" data-total="1572">1572家</span> 企业数量</p>
+			</div>
+
+			<div class="one-top-text">
+				<p>智慧运营云平台链接站点<br>全产业链生态圈支撑全国</p>
+				<span>12个直营站点</span>
+				<span>10个品牌输入站点</span>
+				<span>2个管理输出站点</span>
+				<span>2个代理运营站点</span>
 			</div>
 		</div>
 		<div class="two">
@@ -44,30 +54,130 @@
 					<li data-index="3">预约参观</li>
 					<li data-index="4">会议室预定</li>
 				</ul>
-				<div class="apply-scroll">
-					<div class="apply-list">
+				<div class="apply-scroll" id="applyList">
+					<div class="apply-list" data-index="0">
 						<div class="apply-item">
 							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
 							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
 						</div>
 						<div class="apply-item">
-							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
-							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+							<h2 class="fix">吴芳林 <span class="fr">30分钟前</span></h2>
+							<p class="fix"><span>预定梦工场站</span> <span>1205号办公室</span>	 <span class="fr">7工位    58.23㎡</span> </p>
 						</div>
 						<div class="apply-item">
-							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
-							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+							<h2 class="fix">王祥磊<span class="fr">58分钟前</span></h2>
+							<p class="fix"><span>预定合肥金融港站</span> <span>325号办公室</span>	 <span class="fr">19工位    120㎡</span> </p>
 						</div>
 						<div class="apply-item">
-							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
-							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+							<h2 class="fix">周群 <span class="fr">2小时28分钟前</span></h2>
+							<p class="fix"><span>预定书城路站  213号办公室</span>	 <span class="fr">23工位    130</span> </p>
 						</div><div class="apply-item">
-							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
-							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+							<h2 class="fix">徐杰 <span class="fr">3小时15分钟前</span></h2>
+							<p class="fix"><span>预定创意天地北站  309号办公室</span>	 <span class="fr">55工位    315.26㎡</span> </p>
 						</div>
 						<div class="apply-item">
-							<h2 class="fix">武汉动感科技有限公司 <span class="fr">刚刚</span></h2>
-							<p class="fix"><span>预定金融港东站</span> <span>1102号办公室</span>	 <span class="fr">29工位 159.23㎡</span> </p>
+							<h2 class="fix">邓凯文 <span class="fr">4小时23分钟前</span></h2>
+							<p class="fix">预定创意天地南站  9号办公室</span>	 <span class="fr">12工位    29.38㎡</span> </p>
+						</div>
+					</div>
+					<div class="apply-list hide" data-index="1">
+						<div class="apply-item">
+							<h2 class="fix">陈丽 <span class="fr">12分钟前刚</span></h2>
+							<p class="fix"><span>预定梵间公寓 C4-211号房间</span>	 <span class="fr">C4-211号房间</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">李强 <span class="fr">27分钟前</span></h2>
+							<p class="fix"><span>预约参观梵间公寓 C4-216号房间</span>	 <span class="fr">C4-216号房间</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">张阳成<span class="fr">42分钟前</span></h2>
+							<p class="fix"><span>合同已签订</span>	 <span class="fr">C4-118号房间</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">周影<span class="fr">1小时34分钟前</span></h2>
+							<p class="fix"><span>第二季度的缴款单已生成</span>	 <span class="fr">C4-116号房间</span> </p>
+						</div><div class="apply-item">
+							<h2 class="fix">顾晶晶 <span class="fr">3小时23分钟前</span></h2>
+							<p class="fix"><span>预定梵间公寓  C4-218号房间</span>	 <span class="fr">C4-218号房间</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">尹航 <span class="fr">3小时29分钟前</span></h2>
+							<p class="fix">合同已签订</span>	 <span class="fr">C4-118号房间</span> </p>
+						</div>
+					</div>
+					<div class="apply-list hide" data-index="2">
+						<div class="apply-item">
+							<h2 class="fix">张林文 <span class="fr">刚刚</span></h2>
+							<p class="fix"><span>提交水电类型报修</span>	 <span class="fr">创意天地北站</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">李社区经理  沈运  <span class="fr">12分钟前</span></h2>
+							<p class="fix"><span>已完结工单   等待客户评论</span>	 <span class="fr">订单编号：185222145555</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">工程部   张磊<span class="fr">37分钟前</span></h2>
+							<p class="fix"><span>工单完结，等待验证</span>	 <span class="fr">订单编号：185222145555</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">陈凯达<span class="fr">56分钟前</span></h2>
+							<p class="fix"><span>提交空调类型的报修</span>	 <span class="fr">梦工场站</span> </p>
+						</div><div class="apply-item">
+							<h2 class="fix">李文莉 <span class="fr">1小时22分钟前</span></h2>
+							<p class="fix"><span>提交装饰类型的报修</span>	 <span class="fr">国际理想站</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">工程部     刘伟超<span class="fr">1小时37分钟前</span></h2>
+							<p class="fix">工单完结，等待社区经理验证</span>	 <span class="fr">订单编号：185222145555</span> </p>
+						</div>
+					</div>
+					<div class="apply-list hide" data-index="3">
+						<div class="apply-item">
+							<h2 class="fix">张常林<span class="fr">刚刚</span></h2>
+							<p class="fix"><span>预约参观金融港站</span>	 <span class="fr">需求：150㎡</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">丁田桂<span class="fr">7分钟前</span></h2>
+							<p class="fix"><span>预约参观软件园站</span>	 <span class="fr">需求：35㎡</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">高兰辉  <span class="fr">23分钟前</span></h2>
+							<p class="fix"><span>预约参观梦工场站</span>	 <span class="fr">需求：20个工位</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">巩晓军   <span class="fr">47分钟前</span></h2>
+							<p class="fix"><span>预约参观理想国际站</span>	 <span class="fr">需求：86㎡</span> </p>
+						</div><div class="apply-item">
+							<h2 class="fix">李国新   <span class="fr">1小时8分钟前</span></h2>
+							<p class="fix"><span>预定参观合肥金融港站</span>	 <span class="fr">需求：36个开放工位</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">金轩<span class="fr">2小时12分钟前</span></h2>
+							<p class="fix">预约参观梦工场站</span>	 <span class="fr">需求：20个工位</span> </p>
+						</div>
+					</div>
+					<div class="apply-list hide" data-index="4">
+						<div class="apply-item">
+							<h2 class="fix">湖北洹河文化传媒有限公司<span class="fr">12分钟前</span></h2>
+							<p class="fix"><span>预定创意天地北站3楼2号会议室</span>	 <span class="fr">预定3小时</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">李国新   <span class="fr">31分钟前</span></h2>
+							<p class="fix"><span>预定合肥金融港站  4桉1号会议室</span>	 <span class="fr">预定2小时</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">武汉博海数据技术有限公司 <span class="fr">43分钟前</span></h2>
+							<p class="fix"><span>预定梦想国际站  12楼3号会议室</span>	 <span class="fr">预定3小时</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">徐芬   <span class="fr">1小时12分钟前</span></h2>
+							<p class="fix"><span>预定金融港站 2楼2号会议室</span>	 <span class="fr">预定1小时</span> </p>
+						</div><div class="apply-item">
+							<h2 class="fix">葛丽娟  <span class="fr">1小时22分钟前</span></h2>
+							<p class="fix"><span>预定书城路站 3楼2号会议室</span>	 <span class="fr">预定3小时</span> </p>
+						</div>
+						<div class="apply-item">
+							<h2 class="fix">大风兄弟<span class="fr">1小时43分钟前</span></h2>
+							<p class="fix">预定创意天地北站  4楼3号会议室</span>	 <span class="fr">预定1小时</span> </p>
 						</div>
 					</div>
 				</div>
@@ -137,9 +247,6 @@
 					name: '金融业',
 					value: 1.62
 				},{
-					name: '商务服务',
-					value: 21.01
-				},{
 					name: '贸易/批发/零售',
 					value: 1
 				},{
@@ -152,11 +259,14 @@
 					name: '教育',
 					value: 2.71
 				},{
-					name: '运营与健康',
-					value: 1.53
-				},{
 					name: '生产/加工/制造',
 					value: 3.07
+				},{
+					name: '商务服务',
+					value: 21.01
+				},{
+					name: '运营与健康',
+					value: 1.53
 				},{
 					name: '其他',
 					value: 27.11
@@ -165,31 +275,36 @@
 			pic('need',needData);
 			pic('tmt',tmtData);
 			$(function () {
+				// count('desk');
+				// count('area');
+				// count('user');
+				// count('company');
 				$('#applyMenu li').click(function () {
+					var index = $(this).data('index');
 					$('#applyMenu li').removeClass('active');
 					$(this).addClass('active');
+					$('#applyList .apply-list').hide();
+					$('#applyList .apply-list').eq(index).show();
 				});
-				setInterval(function(){
-					var index = $('#applyMenu .active').data('index');
-					if(index == 4){
-
-						$('#applyMenu li').eq(0).click();
-					}else {
-						$('#applyMenu li').eq(index+1).click();
-					}
-				},2000);
+				// setInterval(function(){
+				// 	var index = $('#applyMenu .active').data('index');
+				// 	if(index == 4){
+				// 		$('#applyMenu li').eq(0).click();
+				// 	}else {
+				// 		$('#applyMenu li').eq(index+1).click();
+				// 	}
+				// },2000);
 			});
 
 
 			function pic(id,data) {
-				console.log(data)
 				var pie = echarts.init(document.getElementById(id));
 				var option = {
 					color: ['#36cb99','#fb9c01', '#cfcccb', '#9bcd33', '#9dcefd','#fd6a65',  '#fdffca', '#ffca59','#0f8fb8', '#fbff69', '#ce3468','#356466'],
 			    series: [{
 						type: 'pie',
 						name: '客户需求站点',
-            radius : '55%',
+            radius : '60%',
             center: ['50%', '50%'],
 						data: data,
 						labelLine: {
@@ -202,12 +317,36 @@
 							borderWidth: 1
 						},
 						label: {
-							color: '#fff'
+							color: '#fff',
+							fontSize: 24,
+							formatter: '{b} {d}%'
 						}
 					}]
 				};
 				pie.setOption(option);
 			};
+
+			function count(id) {
+				var total = $('#'+ id).data('total');
+				var start = parseInt(total/2);
+
+				var add  = setInterval(function () {
+					if(start == total){
+						cleartimeout(add);
+					}
+					start += 10;
+					var str = start + '';
+					if(str.length == 4){
+						$('#'+ id).text('00'+ str);
+					}
+					if(str.length == 5){
+						$('#'+ id).text('0'+ str);
+					}
+					if(str.length == 6){
+						$('#'+ id).text(str);
+					}
+				},1);
+			}
     </script>
 	</body>
 </html>
