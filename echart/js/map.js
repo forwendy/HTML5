@@ -289,7 +289,8 @@ var map = function () {
     }]
   };
 
-  option.geo.center = [114.31, 30.52];
+  option.geo.zoom = 1.4;
+  //option.geo.center = [114.31, 30.52];
 
   map.setOption(option);
 

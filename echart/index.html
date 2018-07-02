@@ -29,15 +29,15 @@
 				<h1>OVU创客星 大数据实时更新</h1>
 				<p><span>13个</span> 城市数量</p>
 				<p><span>26个</span> 站点数量</p>
-				<p><span id="desk" data-total="15367">15367个</span> 工位数量</p>
+				<p><span><span id="desk" data-total="15367">15367</span>个</span> 工位</p>
 
-				<p><span id="area" data-total="319230">319230㎡</span> 站点面积</p>
-				<p><span id="user" data-total="86240">86240个</span> 注册用户</p>
-				<p><span id="company" data-total="1572">1572家</span> 企业数量</p>
+				<p><span><span id="area" data-total="319230">319230</span>㎡</span> 站点面积</p>
+				<p><span><span id="user" data-total="86240">86240</span>个</span> 注册用户</p>
+				<p><span><span id="company" data-total="1572">1572</span>家</span> 企业数量</p>
 			</div>
 
 			<div class="one-top-text">
-				<p>智慧运营云平台链接站点<br>全产业链生态圈支撑全国</p>
+				<p>双创云平台服务产业生态</p>
 				<span>12个直营站点</span>
 				<span>10个品牌输入站点</span>
 				<span>2个管理输出站点</span>
@@ -275,10 +275,10 @@
 			pic('need',needData);
 			pic('tmt',tmtData);
 			$(function () {
-				// count('desk');
-				// count('area');
-				// count('user');
-				// count('company');
+				count('desk');
+				count('area');
+				count('user');
+				count('company');
 				$('#applyMenu li').click(function () {
 					var index = $(this).data('index');
 					$('#applyMenu li').removeClass('active');
@@ -331,20 +331,11 @@
 				var start = parseInt(total/2);
 
 				var add  = setInterval(function () {
-					if(start == total){
-						cleartimeout(add);
+					if(start >= total){
+						clearTimeout(add);
 					}
 					start += 10;
-					var str = start + '';
-					if(str.length == 4){
-						$('#'+ id).text('00'+ str);
-					}
-					if(str.length == 5){
-						$('#'+ id).text('0'+ str);
-					}
-					if(str.length == 6){
-						$('#'+ id).text(str);
-					}
+					$('#'+ id).text(start);
 				},1);
 			}
     </script>

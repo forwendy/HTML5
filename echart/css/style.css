@@ -111,7 +111,7 @@ body{
   margin: 0 0 0.35rem;
   line-height: 1;
 }
-.one-text p span:first-child {
+.one-text p>span:first-child {
   display: block;
   color: #00ffff;
   margin-bottom: 0.15rem;
